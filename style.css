@@ -14,3 +14,13 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
 }
+
+.book-read {
+    background-color: green;
+    color: var(--main-font-color);
+}
+
+.book-not-read {
+    background-color: red;
+    color: var(--main-font-color);
+}
