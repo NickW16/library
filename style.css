@@ -1,0 +1,16 @@
+:root {
+    --main-font-color: antiquewhite;
+    --main-font-size: 28px;
+}
+
+body {
+    background-color: rgb(71, 39, 17);
+    color: var(--main-font-color);
+    font-size: var(--main-font-size);
+}
+
+.book {
+    background-color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
