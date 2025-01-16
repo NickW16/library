@@ -18,11 +18,16 @@ body {
     justify-content: center;
 }
 
+.svg-image {
+    filter: invert(80%);
+}
+
 #full-content {
     display: grid;
     grid-template-rows: 1fr 10fr;
     width: 60%;
     border: 2px solid var(--main-border-color);
+    border-radius: 8px;
     background-color: rgb(51, 26, 6);
 }
 
@@ -33,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 150%;
+    gap: 2%;
 }
 
 #main-content {
@@ -43,7 +49,10 @@ body {
 }
 
 #library-title {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -7%;
 }
 
 #library-content {
