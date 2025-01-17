@@ -44,7 +44,7 @@ body {
 #main-content {
     display: flex;
     flex-direction: column;
-    padding: 3%;
+    padding: 1%;
     gap: 3%;
 }
 

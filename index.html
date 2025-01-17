@@ -29,6 +29,48 @@
 
 
         </div>
+        <dialog>
+            <form id="bookForm" method="post">
+                <div id="line-one">
+                    <div id="formName">
+                        <label for="book_name">Title</label>
+                        <input type="text" id="book_name" name="book_name">
+                    </div>
+                </div>
+
+                <div id="line-two">
+                    <div id="formAuthor">
+                        <label for="book_author">Author</label>
+                        <input type="text" id="book_author" name="book_author">
+                    </div>
+                </div>
+
+                <div id="line-three">
+                    <div id="formPages">
+                        <label for="book_pages">Pages</label>
+                        <input type="number" id="book_pages" name="book_pages">
+                    </div>
+                </div>
+
+                <div id="line-four">
+                    <div id="formRead">
+                        <div id="read-title">Read?</div>
+                        <div>    
+                            <input type="radio" id="book_read" name="book_read" value="yes">
+                            <label for="book_read_yes">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="book_read" name="book_read" value="no">
+                            <label for="book_read_yes">No</label>
+                        </div>    
+                    </div>
+                </div>
+                <button type="submit" id="add-book">Add New Book</button>
+                <button id="cancel">Cancel</button>
+            </form>
+
+        </dialog>
+            <button id="add-new-book">Add New Book</button>
     </div> 
 
     <script src="script.js"></script>

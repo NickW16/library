@@ -16,7 +16,7 @@ function book(name, author, pages, read) {
     };
 }
 
-function displayBooks() {
+function displayBooks() { //adjusts and adds books
 
     libraryContent.textContent = '';
     // Append each book data to the library
@@ -71,3 +71,39 @@ const theHobbit = new book ('The Hobbit', 'J.R.R Tolkien', '295','not read');
 addBookToLibrary(theHobbit);
 const zen = new book ('The Way of Zen', 'Alan Watts', '432', 'read');
 addBookToLibrary(zen);
+
+//add books section
+const dialog = document.querySelector("dialog");
+const bookForm = document.getElementById("bookForm");
+const newBookButton = document.getElementById("add-new-book");
+const cancel = document.getElementById("cancel");
+
+
+//opens add book functionality
+newBookButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+cancel.addEventListener("click", () => {
+    dialog.close();
+});
+
+bookForm.addEventListener('submit', (event) => {
+    event.preventDefault(); //prevent default form submission
+
+    // get form data
+    const formData = new FormData(bookForm);
+    const bookName = formData.get('book_name');
+    const bookAuthor = formData.get('book_author');
+    const bookPages = formData.get('book_pages');
+    const bookRead = formData.get('book_read') === 'yes' ? 'read' : 'not read';
+    
+    // create a new book instance
+    const newBook = new book (bookName, bookAuthor, bookPages, bookRead);
+
+    addBookToLibrary(newBook);
+
+    //close dialog screen and reset form input
+    dialog.close();
+    bookForm.reset();
+});
