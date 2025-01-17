@@ -20,7 +20,7 @@ function displayBooks() { //adjusts and adds books
 
     libraryContent.textContent = '';
     // Append each book data to the library
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book, index) => {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
 
@@ -39,6 +39,7 @@ function displayBooks() { //adjusts and adds books
         bookPages.textContent = book.pages;
         bookDiv.appendChild(bookPages);
 
+
         //this section has a boolean counter
         const bookRead = document.createElement('button');
         bookRead.className = book.read ? 'book-read' : 'book-not-read';
@@ -55,8 +56,19 @@ function displayBooks() { //adjusts and adds books
                 bookRead.textContent = 'Read';
             }
         });
-
+        
         bookDiv.appendChild(bookRead);
+
+        //delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-book';
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', () => {
+            myLibrary.splice(index, 1); //remove book from library
+            displayBooks(); //refresh ui
+        });
+
+        bookDiv.appendChild(deleteButton);
 
         libraryContent.appendChild(bookDiv);
     });
