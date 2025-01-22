@@ -41,6 +41,10 @@ function displayBooks() { //adjusts and adds books
 
 
         //this section has a boolean counter
+        const readAndDelete = document.createElement('div');
+        readAndDelete.className = 'read-and-delete';
+        bookDiv.appendChild(readAndDelete);
+
         const bookRead = document.createElement('button');
         bookRead.className = book.read ? 'book-read' : 'book-not-read';
         bookRead.textContent = book.read ? 'Read' : 'Not Read';
@@ -57,7 +61,7 @@ function displayBooks() { //adjusts and adds books
             }
         });
         
-        bookDiv.appendChild(bookRead);
+        readAndDelete.appendChild(bookRead);
 
         //delete button
         const deleteButton = document.createElement('button');
@@ -68,7 +72,7 @@ function displayBooks() { //adjusts and adds books
             displayBooks(); //refresh ui
         });
 
-        bookDiv.appendChild(deleteButton);
+        readAndDelete.appendChild(deleteButton);
 
         libraryContent.appendChild(bookDiv);
     });

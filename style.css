@@ -96,12 +96,15 @@ body {
     grid-area: 1 / 2 / 2 / 2;
 }
 
+.read-and-delete {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 5px;
+    grid-area: 3 / 2 / 3 / 2;
+}
 
 .book-read {
-    width: 50%;
-    margin-left: 40%;
-    margin-bottom: 5%;
-    grid-area: 3 / 2 / 3 / 2;
     background-color: green;
     color: var(--main-font-color);
     border-style: solid;
@@ -111,10 +114,6 @@ body {
 }
 
 .book-not-read {
-    width: 50%;
-    margin-left: 40%;
-    margin-bottom: 5%;
-    grid-area: 3 / 2 / 3 / 2;
     background-color: rgb(172, 0, 0);
     color: var(--main-font-color);
     border-style: solid;
@@ -123,6 +122,13 @@ body {
     border-color: var(--main-border-color);
 }
 
+.delete-book {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.delete-book:hover,
 .book-read:hover, 
 .book-not-read:hover {
     background-color: #ccc;
