@@ -11,17 +11,61 @@
         <div id="header">
             <img src="/img/open-book.svg" style="height: 100px;" alt="open book"
             class="svg-image">
-            <div id="header-title">Library</div>
-            <img src="/img/open-book.svg" style="height: 100px;" alt="open book"
-            class="svg-image">
+            <h3 id="header-title">Nick's Library</h3>
 
         </div>
         
         <div id="main-content">
-            <div id="library-title">
-                <img src="img/bookshelf.svg" style="height: 75px;" alt="bookshelf"
-                class="svg-image">
-                Books:</div>
+            <div id="library-header">
+                <div id="library-title">
+                    <img src="img/bookshelf.svg" style="height: 75px;" alt="bookshelf"
+                    class="svg-image">
+                    <h4>Books:</h4>
+                </div>
+                <dialog>
+                    <form id="bookForm" method="post">
+                        <div id="line-one">
+                            <div id="formName">
+                                <label for="book_name">Title</label>
+                                <input type="text" id="book_name" name="book_name">
+                            </div>
+                        </div>
+        
+                        <div id="line-two">
+                            <div id="formAuthor">
+                                <label for="book_author">Author</label>
+                                <input type="text" id="book_author" name="book_author">
+                            </div>
+                        </div>
+        
+                        <div id="line-three">
+                            <div id="formPages">
+                                <label for="book_pages">Pages</label>
+                                <input type="number" id="book_pages" name="book_pages">
+                            </div>
+                        </div>
+        
+                        <div id="line-four">
+                            <div id="formRead">
+                                <div id="read-title">Read?</div>
+                                <div>    
+                                    <input type="radio" id="book_read" name="book_read" value="yes">
+                                    <label for="book_read_yes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="book_read" name="book_read" value="no">
+                                    <label for="book_read_yes">No</label>
+                                </div>    
+                            </div>
+                        </div>
+                        <button type="submit" id="add-book">Add New Book</button>
+                        <button id="cancel" type="button">Cancel</button>
+                    </form>
+        
+                </dialog>
+                    <button id="add-new-book">Add New Book</button>
+
+            </div>
             <div id="library-content">
 
 
@@ -29,49 +73,6 @@
 
 
         </div>
-        <dialog>
-            <form id="bookForm" method="post">
-                <div id="line-one">
-                    <div id="formName">
-                        <label for="book_name">Title</label>
-                        <input type="text" id="book_name" name="book_name">
-                    </div>
-                </div>
-
-                <div id="line-two">
-                    <div id="formAuthor">
-                        <label for="book_author">Author</label>
-                        <input type="text" id="book_author" name="book_author">
-                    </div>
-                </div>
-
-                <div id="line-three">
-                    <div id="formPages">
-                        <label for="book_pages">Pages</label>
-                        <input type="number" id="book_pages" name="book_pages">
-                    </div>
-                </div>
-
-                <div id="line-four">
-                    <div id="formRead">
-                        <div id="read-title">Read?</div>
-                        <div>    
-                            <input type="radio" id="book_read" name="book_read" value="yes">
-                            <label for="book_read_yes">Yes</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="book_read" name="book_read" value="no">
-                            <label for="book_read_yes">No</label>
-                        </div>    
-                    </div>
-                </div>
-                <button type="submit" id="add-book">Add New Book</button>
-                <button id="cancel">Cancel</button>
-            </form>
-
-        </dialog>
-            <button id="add-new-book">Add New Book</button>
-    </div> 
 
     <script src="script.js"></script>
 </body>

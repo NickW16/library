@@ -102,6 +102,7 @@ newBookButton.addEventListener("click", () => {
 
 cancel.addEventListener("click", () => {
     dialog.close();
+    bookForm.reset();
 });
 
 bookForm.addEventListener('submit', (event) => {
