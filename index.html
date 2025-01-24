@@ -22,7 +22,7 @@
                     class="svg-image">
                     <h4>Books:</h4>
                 </div>
-                <dialog>
+                <dialog id="dialog-window">
                     <form id="bookForm" method="post">
                         <div id="line-one">
                             <div id="formName">
@@ -48,18 +48,24 @@
                         <div id="line-four">
                             <div id="formRead">
                                 <div id="read-title">Read?</div>
-                                <div>    
-                                    <input type="radio" id="book_read" name="book_read" value="yes">
-                                    <label for="book_read_yes">Yes</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="book_read" name="book_read" value="no">
-                                    <label for="book_read_yes">No</label>
-                                </div>    
+                                <div id="radio-buttons">
+                                    <div>    
+                                        <input type="radio" id="book_read" name="book_read" value="yes">
+                                        <label for="book_read_yes">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="book_read" name="book_read" value="no">
+                                        <label for="book_read_yes">No</label>
+                                    </div> 
+                                </div>   
                             </div>
                         </div>
-                        <button type="submit" id="add-book">Add New Book</button>
-                        <button id="cancel" type="button">Cancel</button>
+
+                        <div id="form-buttons-flex">
+                            <button type="submit" class="form-buttons" id="add-book">Add New Book</button>
+                            <button type="button" class="form-buttons" id="cancel">Cancel</button>
+                        </div>
+
                     </form>
         
                 </dialog>
