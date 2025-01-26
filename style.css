@@ -46,10 +46,42 @@ body {
     padding-left: 30px;
     font-size: 150%;
     gap: 1%;
+    justify-content: space-between;
+}
+
+#header-nick {
+    gap: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.title-link {
+    outline: none;
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+.title-link:hover {
+    color: #101633;
+    transition: 0.2s;
+}
+
+
+.github-link {
+    height: 75px;
+    padding-right: 20px;
+}
+
+.github-link:hover {
+    filter: invert(100%);
+    transition: 0.2s;
 }
 
 #header-title {
     margin: 0;
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
 }
 
 #main-content {
