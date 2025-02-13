@@ -2,18 +2,20 @@ const myLibrary = [];
 
 const libraryContent = document.getElementById('library-content');
 
-function book(name, author, pages, read) {
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    if (read === "not read") {
-        this.read = false;
-    } else {
-        this.read = true;
-    }    
-    this.info = function() {
-        return(this.name + " by " + this.author + ", " + this.pages + " pages , " + this.read)
-    };
+class book {
+    constructor (name, author, pages, read) {
+        this.name = name;
+        this.author = author;
+        this.pages = pages;
+        if (read === "not read") {
+            this.read = false;
+        } else {
+            this.read = true;
+        }    
+        this.info = function() {
+            return(this.name + " by " + this.author + ", " + this.pages + " pages , " + this.read)
+        };
+    }
 }
 
 function displayBooks() { //adjusts and adds books
