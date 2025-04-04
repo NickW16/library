@@ -96,6 +96,9 @@ const bookForm = document.getElementById("bookForm");
 const newBookButton = document.getElementById("add-new-book");
 const cancel = document.getElementById("cancel");
 
+document.querySelectorAll('#bookForm input').forEach(input => {
+    input.required = true;
+});
 
 //opens add book functionality
 newBookButton.addEventListener("click", () => {
@@ -116,7 +119,8 @@ bookForm.addEventListener('submit', (event) => {
     const bookAuthor = formData.get('book_author');
     const bookPages = formData.get('book_pages');
     const bookRead = formData.get('book_read') === 'yes' ? 'read' : 'not read';
-    
+
+
     // create a new book instance
     const newBook = new book (bookName, bookAuthor, bookPages, bookRead);
 
